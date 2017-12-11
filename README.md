@@ -17,6 +17,7 @@ There are some example of sass
     　　* compressed：压缩后的css代码。
         生产环境当中，一般使用最后一个选项：
         sass --style compressed test.sass test.css
+***
 ### Step 4:SASS监听某个文件或者某个目录  
 ```
 //监听文件(watch a file)
@@ -25,6 +26,7 @@ sass --watch sass文件scss:css文件.css eg:sass --watch index.scss:style.css
 //监听目录(watch a directory)
 sass --watch sass文件夹名:css文件夹名 eg:sass --watch app/index:public/style
 ```
+***
  ### Step 5:基本用法  
    #### 5.1>.嵌套
  ```
@@ -71,6 +73,7 @@ sass --watch sass文件夹名:css文件夹名 eg:sass --watch app/index:public/s
      　　　　top: 50px + 100px;
      　　　　right: $Right * 10%;
      　　}
+***
 ### Step 6:代码的重用
         SASS允许一个选择器继承另一个选择器,例如：
             .box1{
@@ -81,6 +84,7 @@ sass --watch sass文件夹名:css文件夹名 eg:sass --watch app/index:public/s
                 @extend .box1;
                 background:#1abfad
             }
+***
 ### Step 7:mixin(重用的代码块)
         使用@mixin命令，定义一个代码块。
         　　@mixin left {
@@ -109,6 +113,7 @@ sass --watch sass文件夹名:css文件夹名 eg:sass --watch app/index:public/s
         使用的时候，可以像下面这样调用：
         　　#navbar li { @include rounded(top, left); }
         　　#footer { @include rounded(top, left, 5px); }
+***
 ### Step 8:高级用法
 #### 8.1：循环语句
         a>、支持for循环
