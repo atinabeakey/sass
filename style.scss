@@ -3,6 +3,7 @@
   padding:0;
 }
 $blue :#1ab9f5;
+$color:#fff;
 $side:left;
 .box {
   width: 100px;
@@ -65,7 +66,7 @@ $side:left;
 .border2 {
   @extend .border1;
   background: $blue;
-  color: #fff;
+  color: $color;
 }
 ul{
   overflow: hidden;

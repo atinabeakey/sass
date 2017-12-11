@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #1ab9f5; }
+  .box p {
+    color: #1ab9f5;
+    font-size: 14px; }
+  .box a:link {
+    color: #f00; }
+  .box a:visited {
+    color: #0f0; }
+  .box a:hover {
+    color: #ffb3ff; }
+  .box a:active {
+    color: #000; }
+
+.app {
+  width: 200px;
+  height: 200px;
+  border-color: #1ab9f5;
+  border-width: 2px;
+  border-style: dashed;
+  border-left-radius: 5px;
+  margin-left: 20px;
+  margin-top: 30px; }
+  .app h1 {
+    font-size: 16px; }
+
+.clearfix::after {
+  content: '.';
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  width: 100%;
+  overflow: hidden; }
+
+.border1, .border2, ul li, h3 {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  width: 100px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px; }
+
+.border2 {
+  background: #1ab9f5;
+  color: #fff; }
+
+ul {
+  overflow: hidden;
+  margin-top: 20px; }
+
+ul li {
+  float: left;
+  background: #f00; }
+
+h3 {
+  width: 300px;
+  border: 10px solid #ffb3ff;
+  margin: 20px;
+  border-top-left-radius: 50px;
+  -moz-border-top-left-radius: 50px;
+  -webkit-border-top-left-radius: 50px; }
+
+/*# sourceMappingURL=style.css.map */
