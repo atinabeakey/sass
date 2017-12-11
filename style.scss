@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding:0;
+}
+$blue :#1ab9f5;
+$side:left;
+.box {
+  width: 100px;
+  height: 100px;
+  border:1px solid $blue;
+  p{
+    color: $blue;
+    font-size:14px;
+  }
+  a {
+    &:link {
+      color: #f00;
+    }
+    &:visited {
+      color: #0f0;
+    }
+    &:hover {
+      color: #ffb3ff;
+    }
+    &:active {
+      color: #000;
+    }
+  }
+}
+.app {
+  width: 200px;
+  height: 200px;
+  border:{
+    color: $blue;
+    width:2px;
+    style: dashed;
+  }
+  border-#{$side}-radius:5px;
+  margin:{
+    left:20px;
+    top:30px;
+  }
+  h1{
+    font-size:16px;
+  }
+}
+.clearfix::after {
+  content: '.';
+  clear: both;
+  visibility: hidden;
+  height:0;
+  width:100%;
+  overflow: hidden;
+}
+
+.border1 {
+  display: inline-block;
+  float: $side;
+  margin-right: 20px;
+  width: 100px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+.border2 {
+  @extend .border1;
+  background: $blue;
+  color: #fff;
+}
+ul{
+  overflow: hidden;
+  margin-top:20px;
+}
+@mixin left($background:$blue){
+  float: $side;
+  @extend .border1;
+  background: $background;
+}
+ul li{
+  @include left(#f00);
+}
+@mixin prefix($top,$left,$radius:10px){
+  border-#{$top}-#{$left}-radius:$radius;
+  -moz-border-#{$top}-#{$left}-radius: $radius;
+  -webkit-border-#{$top}-#{$left}-radius: $radius
+}
+h3 {
+  @extend .border1;
+  width: 300px;
+  border:10px solid #ffb3ff;
+  margin: 20px;
+  @include prefix(top,left,50px);
+}
